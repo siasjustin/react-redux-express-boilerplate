@@ -1,14 +1,8 @@
 import { combineReducers } from 'redux';
-import homepageData from './homepageReducer';
-import faqsPageData from './faqReducer';
-import loginData from './loginReducer';
-import zipsData from './zipsReducer';
+import homePageData from './homePageReducer';
 
 const rootReducer = combineReducers({
-	homepageData,
-	faqsPageData,
-	loginData,
-	zipsData
+	homePageData,
 })
 
 export default rootReducer;

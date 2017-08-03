@@ -1,6 +1,6 @@
 import 'whatwg-fetch'; 
-class HomepageApi {
-	static getAllHomepageData(){
+class HomePageApi {
+	static getAllHomePageData(){
 		return fetch('/api-homepage').then(response => {
 			return response.json();
 		}).catch(error => {
@@ -9,4 +9,4 @@ class HomepageApi {
 	}
 }
 
-export default HomepageApi;
+export default HomePageApi;

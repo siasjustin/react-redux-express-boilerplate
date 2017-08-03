@@ -24,10 +24,10 @@
 }
 
 .outerContainer {
-	padding: $desktop_padding;
+	padding: 0 50px;
 	position: relative;
 	@include breakpoint($small-under) {
-		padding: $mobile_padding;
+		padding: 0 20px;
 	}
 }
 .container {

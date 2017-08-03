@@ -1,6 +1,5 @@
+// const mailer = require('./mailer');
 
-const mailer = require('./mailer');
-
-module.exports = {
-    mailer
-}
+// module.exports = {
+//     mailer
+// }

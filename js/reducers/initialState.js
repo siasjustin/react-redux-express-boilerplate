@@ -1,5 +1,5 @@
 export default {
 	homePageData: {
-		heroTitle: "Hello World",
+		title: "Hello Squirrorld",
 	},
 }

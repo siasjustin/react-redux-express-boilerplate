@@ -21,6 +21,15 @@ const unmountComponent = function() {
   console.log("component unmounted");
 }
 
+
+/**
+ * Gets the browser name or returns an empty string if unknown. 
+ * This function also caches the result to provide for any 
+ * future calls this function has.
+ *
+ * @returns {string}
+ */
+ 
 var browser = function() {
     // Return cached result if avalible, else get result then cache it.
     if (browser.prototype._cachedResult)
@@ -58,12 +67,13 @@ var browser = function() {
 };
 
 
+
+
 let isMobile = false,
-    isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,
-    appName = isIos ? 'iOs' : 'Android',
-    appUrl = isIos ? 'https://itunes.apple.com/us/app/ofo-riding-your-way-in-the-us-uk-and-sg/id1190831637?mt=8' : 'https://play.google.com/store/apps/details?id=so.ofo.abroad&hl=en',
-    
-let isTablet = (isMobile && window.innerWidth > 600) ? true : false,
+  isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,
+  appName = isIos ? 'iOs' : 'Android',
+  appUrl = isIos ? 'https://itunes.apple.com/us/app/ofo-riding-your-way-in-the-us-uk-and-sg/id1190831637?mt=8' : 'https://play.google.com/store/apps/details?id=so.ofo.abroad&hl=en', 
+  isTablet = (isMobile && window.innerWidth > 600) ? true : false,
   isCellular = (isMobile && window.innerWidth < 600) ? true : false;
 
 

@@ -5,14 +5,14 @@ import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import "babel-polyfill";
 
+import actions from './actions';
 
 // components
 import App from './components/app';
 
 // page components
-import HomePage from './components/home/HomePage';
+import HomePage from './components/homePage/HomePage';
 
-import actions from './actions';
 const store = configureStore();
 
 render((

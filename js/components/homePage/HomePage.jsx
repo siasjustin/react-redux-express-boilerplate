@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import DocumentMeta from 'react-document-meta';
+import actions from '../../actions';
 
 class HomePage extends React.Component {
     constructor(props){
@@ -17,28 +18,25 @@ class HomePage extends React.Component {
         globals.unmountComponent();
     }
     render() {
-        let page = {
-            header: "Header",
-            subheader: "hey dudes, this is a subheader",
-        }
         return (
-            <div id="homepage">
-                <DocumentMeta {...meta.home} />
-                <header>{page.header}</header>
+            <div id="homePage">
+                <DocumentMeta {...meta.homePage} />
+                <h1>{this.props.homePageData.title}</h1>
             </div>
         );
     }
 }
 
-function mapStateToProps($state, ownProps) {
-    return (
-        HomePageData: state.HomePageData,
-    );
+function mapStateToProps(state, ownProps) {
+    return {
+        homePageData: state.homePageData,
+    }
 }
+
 function mapDispatchToProps(dispatch) {
-    return (
+    return {
         actions: bindActionCreators(actions, dispatch)
-    );
+    };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage)
